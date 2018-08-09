@@ -1,0 +1,19 @@
+
+<div class="topNavigation">
+  <div><a routerLink="/index"><img class="logo" src="../../assets/images/logo1.jpg" alt=""></a></div>
+  <div *ngIf="!loginStatus" class="author">
+    <ul class="user-nav" (mouseover)="showAuthor()" (mouseleave)="hiddenAuthor()">
+      <li id="ishover"><img class="user-nav-header" src="../../assets/images/user.png" alt=""></li>
+      <div class="user-nav-list" [hidden]="isHover">
+        <li><span>个人中心</span></li>
+        <li><span>我的文章</span></li>
+        <li><span>退出</span></li>
+      </div>
+    </ul>
+  </div>
+  <div *ngIf="loginStatus" class="login-register">
+    <span><i></i>登录</span> |
+    <span>注册</span>
+  </div>
+  <div><span><img src="../../assets/images/write.png" alt="">写文章</span></div>
+</div>
